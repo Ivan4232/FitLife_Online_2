@@ -1,5 +1,10 @@
 ---
 
+const today = new Date();
+const currentYear = today.getFullYear();
+
+import {SITE_NAME} from '../../config';
+
 ---
 
 <!-- Start Footer Section -->
@@ -7,7 +12,7 @@
   <div class="container">
     <div class="footer-content">
       <div class="discription">
-        <img src="assets/images/site-logo.png" alt="images" />
+        <img src="/assets/images/site-logo.png" alt="images" />
         <p>Achieve your health goals with expert trainers, state-of-the-art equipment, and a supportive community</p>
         <ul>
           <li class="title">Follow Us:</li>
@@ -36,7 +41,7 @@
         </form>
       </div>
     </div>
-    <p class="end-text">All Right Reserved © FitCore 2025</p>
+    <p class="end-text">All Right Reserved © {SITE_NAME} {currentYear}</p>
   </div>
 </footer>
 
