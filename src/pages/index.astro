@@ -4,6 +4,7 @@ import Header from "../blocks/Header/Header.astro";
 import MobileMenu from "../blocks/MobileMenu/MobileMenu.astro";
 import Footer from "../blocks/Footer/Footer.astro";
 import About from "../blocks/About/About.astro"
+import { SITE_NAME } from '../config';
 ---
 
 <html lang="en">
@@ -12,7 +13,7 @@ import About from "../blocks/About/About.astro"
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="viewport" content="width=device-width" />
-		<title>FitCore</title>
+		<title>{SITE_NAME}</title>
 	</head>
 	<body>
 		<Header />
