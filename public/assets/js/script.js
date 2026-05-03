@@ -96,3 +96,36 @@ $(document).ready(function(){
     })
 
 });
+
+ // ===== Custom Carousel 2 (smooth) =====>
+
+const carousel = document.querySelector('#carouselExample');
+
+if (carousel) {
+  const inner = carousel.querySelector('.carousel-inner');
+  const items = carousel.querySelectorAll('.carousel-item');
+  const nextBtn = carousel.querySelector('.carousel-control-next');
+  const prevBtn = carousel.querySelector('.carousel-control-prev');
+
+  let index = 0;
+
+  function updateSlide() {
+    inner.style.transform = `translateX(-${index * 100}%)`;
+    inner.style.transition = 'transform 0.5s ease';
+  }
+
+  // стартовая позиция
+  updateSlide();
+
+  nextBtn.addEventListener('click', () => {
+    index++;
+    if (index >= items.length) index = 0;
+    updateSlide();
+  });
+
+  prevBtn.addEventListener('click', () => {
+    index--;
+    if (index < 0) index = items.length - 1;
+    updateSlide();
+  });
+}
